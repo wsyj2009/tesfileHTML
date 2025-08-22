@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery-ui-effects.custom.min.js"></script>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_DW_effectDrop(obj,method,effect,dir,speed)
+{
+    obj[method](effect, { direction: dir}, speed);
+}
+function MM_DW_effectClip(obj,method,effect,dir,speed)
+{
+    obj[method](effect, { direction: dir}, speed);
+}
+function MM_DW_effectShake(obj,method,effect,direction,distance,times,speed)
+{
+    obj[method](effect, {direction:direction,distance:distance,times:times}, speed);
+}
+function MM_DW_effectScale(obj,method,effect,dir,originY,originX,per,size,speed)
+{
+    obj[method](effect, { direction: dir, origin: [originY, originX], percent: per, scale: size }, speed);
+}
+function MM_DW_effectSlide(obj,method,effect,direction,distance,speed)
+{
+    obj[method](effect, { direction: direction, distance: distance}, speed);
+}
+function MM_DW_effectPuff(obj,method,effect,percent,speed)
+{
+    obj[method](effect, { percent:percent}, speed);
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('fh2.jpg')">
+<table width="80%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td width="21%" align="center" valign="middle"><h1>拓海</h1></td>
+      <td width="79%"><img src="image/Forza Horizon 4 Screenshot 2025.06.08 - 15.57.59.46-1.jpg" width="768" height="432" alt=""/></td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><h1>电灯泡</h1></td>
+      <td><img src="image/Forza Horizon 4 Screenshot 2025.07.20 - 17.36.26.78-1.jpg" width="768" height="432" alt=""/></td>
+    </tr>
+    <tr>
+      <td height="439" align="center" valign="middle"><h1>棋逢对手</h1></td>
+      <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','fh2.jpg',1)"><img src="fh1.jpg" alt="" width="768" height="432" id="Image3"></a></td>
+    </tr>
+  </tbody>
+</table>
+<table width="60%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td align="center"><h4 style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif">Do you like this?</h4></td>
+      <td align="center" onClick="MM_DW_effectDrop($(this),'show','drop','left',1000);MM_DW_effectClip($('#yes'),'show','clip','vertical',1000);MM_DW_effectSlide($('#yes'),'toggle','slide','left',20,1000);MM_DW_effectClip($('#yes'),'toggle','clip','vertical',1000);MM_DW_effectPuff($('#yes'),'hide','puff',150,1000)"><input type="radio" name="radio" id="yes" value="radio">
+        Yes！</td>
+      <td align="center" onClick="MM_DW_effectClip($(this),'show','clip','vertical',1000);MM_DW_effectShake($('#no'),'effect','shake','left',20,3,1000)"><input type="radio" name="radio2" id="no" value="radio2">
+      No！</td>
+    </tr>
+  </tbody>
+</table>
+<table width="20%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td align="center"><input name="submit" type="submit" id="submit" onClick="MM_DW_effectScale($('#submit'),'hide','scale','both','middle','center',0,'both',1000)" value="提交"></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p><br>
+</p>
+</body>
+</html>
