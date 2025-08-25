@@ -75,10 +75,19 @@ function MM_swapImage() { //v3.0
   <tbody>
     <tr>
       <td align="center"><h4 style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif">Do you like this?</h4></td>
-      <td align="center" onClick="MM_DW_effectDrop($(this),'show','drop','left',1000);MM_DW_effectClip($('#yes'),'show','clip','vertical',1000);MM_DW_effectSlide($('#yes'),'toggle','slide','left',20,1000);MM_DW_effectClip($('#yes'),'toggle','clip','vertical',1000);MM_DW_effectPuff($('#yes'),'hide','puff',150,1000)"><input type="radio" name="radio" id="yes" value="radio">
-        Yes！</td>
-      <td align="center" onClick="MM_DW_effectClip($(this),'show','clip','vertical',1000);MM_DW_effectShake($('#no'),'effect','shake','left',20,3,1000)"><input type="radio" name="radio2" id="no" value="radio2">
-      No！</td>
+      <td align="center" onClick="MM_DW_effectDrop($(this),'show','drop','left',1000);MM_DW_effectClip($('#yes'),'show','clip','vertical',1000);MM_DW_effectSlide($('#yes'),'toggle','slide','left',20,1000);MM_DW_effectClip($('#yes'),'toggle','clip','vertical',1000);MM_DW_effectPuff($('#yes'),'hide','puff',150,1000)"><table width="200">
+        <tr>
+          <td><label onClick="MM_DW_effectPuff($('#Choice_0'),'show','puff',150,1000)">
+            <input type="radio" name="Choice" value="单选" id="Choice_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label onClick="MM_DW_effectShake($('#Choice_1'),'effect','shake','left',20,3,1000)">
+            <input type="radio" name="Choice" value="单选" id="Choice_1">
+            NO</label></td>
+        </tr>
+      </table></td>
+      <td align="center" onClick="MM_DW_effectClip($(this),'show','clip','vertical',1000);MM_DW_effectShake($('#no'),'effect','shake','left',20,3,1000)">&nbsp;</td>
     </tr>
   </tbody>
 </table>
