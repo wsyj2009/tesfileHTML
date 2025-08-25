@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>衣架的超简陋测试网站</title>
+<title>无标题文档</title>
 <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 <script src="jQueryAssets/jquery-ui-effects.custom.min.js"></script>
 <script type="text/javascript">
@@ -51,6 +51,10 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+function MM_DW_effectBounce(obj,method,effect,direction,distance,mode,times,speed)
+{
+    obj[method](effect, { direction:direction,distance:distance,mode:mode,times:times}, speed);
+}
 </script>
 </head>
 
@@ -77,7 +81,7 @@ function MM_swapImage() { //v3.0
       <td align="center"><h4 style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif">Do you like this?</h4></td>
       <td align="center" onClick="MM_DW_effectDrop($(this),'show','drop','left',1000);MM_DW_effectClip($('#yes'),'show','clip','vertical',1000);MM_DW_effectSlide($('#yes'),'toggle','slide','left',20,1000);MM_DW_effectClip($('#yes'),'toggle','clip','vertical',1000);MM_DW_effectPuff($('#yes'),'hide','puff',150,1000)"><table width="200">
         <tr>
-          <td><label onClick="MM_DW_effectPuff($('#Choice_0'),'show','puff',150,1000)">
+          <td><label onClick="MM_DW_effectPuff($('#Choice_0'),'show','puff',150,1000);MM_DW_effectDrop($('#Choice_0'),'show','drop','down',1000);MM_DW_effectClip($('#Choice_0'),'toggle','clip','vertical',1000)">
             <input type="radio" name="Choice" value="单选" id="Choice_0">
             Yes</label></td>
         </tr>
@@ -99,8 +103,7 @@ function MM_swapImage() { //v3.0
   </tbody>
 </table>
 <p>&nbsp;</p>
-<p><br>
+<p onClick="MM_DW_effectBounce($('#Choice_0'),'effect','bounce','down',20,'toggle',5,1000)"><br>
 </p>
 </body>
 </html>
-
